@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F1FADA;
+}
+
+/* To seperate all the divs from each other. */
+.first-container, .second-container, .flex-third-container{
+    margin-bottom: 100px;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #F1C27B, #FFD89C, #A2CDB0 ,#85A389);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+.first-container {
+    display: inline-block;
+    position: relative;
+    height: 1000px; /*set the container height according to the background image*/
+    width: 100%;
+    background-image: url(./assests/First_Container.JPG);
+    /* These two are basically used to fit your image properly in the div container. */
+    background-size: cover;
+    background-position: center;
+}
+
+.first-container-text {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Used CSS selectors grouping; child grouping*/
+.first-container-text > h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* To make the image circular */
+.img_class {
+    border-radius: 50%;
+}
+
+/* To make the whole second div container in center. */
+.second-container {
+    text-align: center;
+}
+
+/* Used CSS selectors grouping; child grouping*/
+.second-container > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: green;
+    font-size: xx-large;
+}
+
+/* Used CSS selectors grouping; child grouping*/
+.second-container > p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+@media (min-width: 700px){
+.flex-third-container{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 80px;
+    justify-content: space-around;
+}
+
+.flex-item-experience > h3, .flex-item-skills > h3 , .flex-item-interest > h3 {
+    text-align: center;
+}
+
+.flex-item-experience > img , .flex-item-skills > img , .flex-item-interest > img {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.flex-item-experience , .flex-item-skills , .flex-item-interest{
+    flex-basis: 350px;
+    float: right;
+}
+}
+
+@media (min-width: 100px) and (max-width: 700px)
+{
+    .flex-third-container{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 80px;
+        justify-content: space-around;
+    }
+    
+    .flex-item-experience > h3, .flex-item-skills > h3 , .flex-item-interest > h3 {
+        text-align: center;
+    }
+    
+    .flex-item-experience > img , .flex-item-skills > img , .flex-item-interest > img {
+        width: 120px;
+        height: 120px;
+        float: left;
+    }
+    
+    .flex-item-experience , .flex-item-skills , .flex-item-interest{
+        flex-basis: 350px;
+        float: right;
+    }
+}
+
+.fourth-container{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+
+a{
+    display: inline-block;
+    color: white;
+    font-size: x-large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
